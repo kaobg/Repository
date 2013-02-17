@@ -1,0 +1,38 @@
+﻿<Window x:Class="AllPathsInALetterMazeGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="All paths in a maze of letters" Height="450" Width="650">
+    <DockPanel Name="DockPanel">
+        
+        
+        <Grid Name="GeneralGrid" DockPanel.Dock="Top" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBox Name="FilePathBox" DockPanel.Dock="Bottom" Foreground="Gray"
+                             Width="220" HorizontalAlignment="Center" Height="25"
+                             VerticalContentAlignment="Center" IsReadOnly="True">
+                        Browse for file...
+                    </TextBox>
+                    <Button Height="25" Width="65" Click="BrowseButton_Click">Browse...</Button>
+                </StackPanel>
+                <TextBlock Foreground="Gray" HorizontalAlignment="Center">or </TextBlock>
+                <Button Height="25"
+                         Click="RandomButton_Click">Create a random maze</Button>
+            </StackPanel>
+
+            <!-- TODO: fix the grid and create the stackpanel on the right and everything else-->
+
+            <!--<Grid Name = "MazeGrid" ShowGridLines="True" Grid.Column="0">
+            </Grid>
+            
+            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <StackPanel Name="PathsPanel" Orientation="Vertical">
+                </StackPanel>
+            </ScrollViewer>-->
+        </Grid>
+    </DockPanel>
+</Window>
